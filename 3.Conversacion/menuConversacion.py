@@ -32,19 +32,18 @@ def enlace(update: Update, context: CallbackContext):
 
 def audio(update: Update, context: CallbackContext):
     query = update.callback_query
-    #Se envia una imagen ique obtiene desde una url
+    #Se envia un audio ique obtiene desde una url
     context.bot.send_audio( audio="https://www.elongsound.com/images/mp3/trueno04.mp3", 
                                 title="Sonido truenos",
                                 chat_id = query.message.chat_id,
                                 caption="Truenos")
 
     context.bot.send_audio(audio=open("../static/la-atmosfera_4.mp3", "rb"), 
-                                title="Sonido truenos",
+                                title="Sonido de pajaros",
                                 chat_id = query.message.chat_id,
-                                caption="Truenossss")
+                                caption="Pajaros")
                                 
 def imagen(update: Update, context: CallbackContext):
-    print("entra")
     query = update.callback_query
     #Se envia una imagen desde una ubicacion con lectura en  modo binario (rb)
     context.bot.send_photo(photo=open("../static/imagenBot.png", "rb"), 
@@ -77,10 +76,10 @@ def main():
 		entry_points=[CommandHandler('start', start)],
 		states={
                 MENU_PRINCIPAL: [CallbackQueryHandler(documento, pattern=str(DOCUMENTO)),
-                 CallbackQueryHandler(audio, pattern=str(AUDIO)),
-                  CallbackQueryHandler(imagen, pattern=str(IMAGEN)),
-                   CallbackQueryHandler(video, pattern=str(VIDEO)),
-                    CallbackQueryHandler(enlace, pattern=str(ENLACE))],
+                                CallbackQueryHandler(audio, pattern=str(AUDIO)),
+                                CallbackQueryHandler(imagen, pattern=str(IMAGEN)),
+                                CallbackQueryHandler(video, pattern=str(VIDEO)),
+                                CallbackQueryHandler(enlace, pattern=str(ENLACE))],
 
 	    },
 	    fallbacks=[CommandHandler('start', start)]

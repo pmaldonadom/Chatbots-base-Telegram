@@ -18,7 +18,6 @@ teclado_volver_menu = [[InlineKeyboardButton(text='🔙 Volver', callback_data=s
 
 def start(update: Update, context: CallbackContext):
     datos_user = update.message.from_user
-    print("update datos", update.message.from_user)
     nombre_usuario =  update.message.from_user.first_name
     id_usuario =  update.message.from_user.id
     alias =  update.message.from_user.username
@@ -100,6 +99,7 @@ def main():
 
     # Se obtiene el despachador (dispatcher) para registrar los negociadores (handlers)
     dp = updater.dispatcher
+
     conv_handler = ConversationHandler(
 		entry_points=[CommandHandler('start', start)],
 		states={

@@ -4,7 +4,7 @@ from telegram.ext import Updater, CallbackContext, CommandHandler
 
 def start(update: Update, context: CallbackContext):
     # Envía un mensaje cuando se emite el comando /start
-    update.message.reply_text('Enviar enlaces')
+    update.message.reply_text('Ejemplo para enviar enlaces')
 
 def enlace(update: Update, context: CallbackContext):
      #Para enviar un enlace necesitamos el argumento parse_mode

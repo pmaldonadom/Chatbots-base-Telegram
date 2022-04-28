@@ -15,7 +15,7 @@ def main():
     # Se obtiene el despachador (dispatcher) para registrar los negociadores (handlers)
     dp = updater.dispatcher
     
-    #Se añade el negociador CommandHlander al distpatcher con el comando start
+    #Se añade el negociador CommandHlander al dispatcher con el comando start
     dp.add_handler(CommandHandler('start', start))
 
     # Pregunta constantemente a nuestro bot si hay nuevos mensajes

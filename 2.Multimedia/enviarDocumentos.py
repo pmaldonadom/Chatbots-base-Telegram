@@ -8,28 +8,19 @@ def start(update: Update, context: CallbackContext):
 
 def documento(update: Update, context: CallbackContext):
 
-    update.message.reply_document(open("trazabilidad.pdf", "rb"), 
+    update.message.reply_document(open("../static/trazabilidad.pdf", "rb"), 
                                 caption="PDF sobre la trazabilidad")
                                 
-    update.message.reply_document(open("trazabilidad.pdf", "rb"), 
+    update.message.reply_document(open("../static/trazabilidad.pdf", "rb"), 
                                 caption="PDF sobre la trazabilidad",
-                                thumb=open("imagenBot.png", "rb"))
+                                thumb=open("../static/imagenBot.png", "rb"))
 
-    update.message.reply_document(open("hola.txt", "rb"), 
+    update.message.reply_document(open("../static/hola.txt", "rb"), 
                                 caption="Documento txt")
 
 def gif(update: Update, context: CallbackContext):
-    update.message.reply_animation(open("cat.gif", "rb"), 
+    update.message.reply_animation(open("../static/cat.gif", "rb"), 
                                 caption="gif gato")
-
-
-def audio2(update: Update, context: CallbackContext):
-
-    #Enviar sonido desde ubicacion local en modo de lectura binaria (rb)
-    update.message.reply_audio(open("la-atmosfera_4.mp3", "rb"), 
-                                reply_to_message_id= update.message.message_id,
-                                title="Pajaros",
-                                caption="Sonido de pajaros")
 
 
 def main():
