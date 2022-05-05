@@ -25,7 +25,7 @@ def main():
     # Creacion del updater pasandole el token del bot
     updater = Updater(token='introducir-token-aqui')
 
-    # Se obtiene el despachador (dispatcher) para registrar los negociadores (handlers)
+    # Se obtiene el despachador (dispatcher) para registrar los manejadores (handlers)
     dp = updater.dispatcher
     
     #Se añade el negociador CommandHlander al dispatcher con el comando start
