@@ -39,7 +39,7 @@ Ejemplos básicos sobre bots de telegram realizados con la libreria - python-tel
 
   1. Crear entorno virtual 
    
-		 conda create --bot python=3.7
+		 conda create --name bot python=3.7
 
   3. Activar entorno de anaconda
   
